@@ -1,0 +1,18 @@
+
+
+GET http://localhost:3000/orders?account_id=1234
+
+
+###
+GET http://localhost:3000/orders/6526ada4ed40f9499f29bda0
+
+
+###
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "account_id": "1234",
+    "asset_id": "xpto11",
+    "quantity": 100
+}

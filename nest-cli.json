@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/nestjs-grpc/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-grpc/tsconfig.app.json",
+    "assets": ["**/*.proto"],
+    "watchAssets": true
+  },
+  "monorepo": true,
+  "root": "apps/nestjs-grpc",
+  "projects": {
+    "nestjs-grpc": {
+      "type": "application",
+      "root": "apps/nestjs-grpc",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-grpc/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-grpc/tsconfig.app.json"
+      }
+    },
+    "bolsa-valores": {
+      "type": "application",
+      "root": "apps/bolsa-valores",
+      "entryFile": "main",
+      "sourceRoot": "apps/bolsa-valores/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bolsa-valores/tsconfig.app.json"
+      }
+    }
+  }
+}
